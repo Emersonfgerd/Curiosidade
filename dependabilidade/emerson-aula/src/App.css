@@ -1,0 +1,136 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  font-size: 2rem;
+  position: relative;
+}
+
+.App-header .theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.App-header .theme-toggle:hover {
+  background-color: #e67e22;
+}
+
+.App.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.App.dark {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.curiosidades-lista {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s ease;
+}
+
+.curiosidades-lista h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.curiosidades-lista ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.curiosidades-lista li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #34495e;
+  transition: transform 0.3s ease;
+}
+
+.curiosidades-lista li:hover {
+  transform: translateX(10px);
+}
+
+.curiosidades-lista li::before {
+  content: "🔹 ";
+  font-size: 1.5rem;
+}
+
+.show-more {
+  background-color: #f39c12;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.show-more:hover {
+  background-color: #e67e22;
+}
+
+/* Dark mode adjustments */
+.App.dark .curiosidades-lista {
+  background-color: #34495e;
+}
+
+.App.dark .curiosidades-lista h2 {
+  color: #ecf0f1;
+}
+
+.App.dark .curiosidades-lista li {
+  color: #ecf0f1;
+}
+
+.App.dark .show-more {
+  background-color: #e67e22;
+}
+
+.imagem-principal {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.imagem-centralizada {
+  max-width: 90%;
+  width: 400px; /* Tamanho máximo da imagem */
+  height: auto;
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito de zoom ao passar o mouse sobre a imagem */
+.imagem-centralizada:hover {
+  transform: scale(1.05); /* Aumenta a imagem ligeiramente */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
+}
